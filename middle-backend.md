@@ -44,7 +44,21 @@
 13. Реализовывали ли раньше авторизацию? Если да то как?
 14. Что такое агрегирование и аннотирование? Зачем и где применяется?
 15. Сколько баз данных можно подключить к одному Джанго проекту?
-
+16. Что делать если мы пишем проект, а база данных уже есть?
+17. Что такое роутер?Зачем давать имена урлам?
+18. Сколько запросов будет вызвать [этот код](#question-18-code)? 
+19. Как выполнить логику в момент инициализации конкретного приложения?*(
+   senior) [ответ](https://docs.djangoproject.com/en/5.0/ref/applications/#methods)
+20. Как инициализируется реестр приложений?*(
+   senior) [ответ](https://docs.djangoproject.com/en/5.0/ref/applications/#initialization-process)
+#### Question 18 code
+```python
+def get_users():
+    users = User.objects.filter(active=True)
+    for user in users:
+        user.adress = normolize_address(user.adress)
+        user.save()
+```
 ### Django Rest Framework
 
 1. Что это? Зачем он нужен и чем отличается от обычного Django? Какие Вы знаете основные преимущества?
